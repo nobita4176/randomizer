@@ -1,0 +1,184 @@
+{
+  "megamiList": [
+    {
+      "name": "ユリナ",
+      "number": 1,
+      "code": "na-01-yurina-o"
+    },
+    {
+      "name": "「第一章」ユリナ",
+      "number": 1,
+      "code": "na-01-yurina-a1"
+    },
+    {
+      "name": "サイネ",
+      "number": 2,
+      "code": "na-02-saine-o"
+    },
+    {
+      "name": "「第二章」サイネ",
+      "number": 2,
+      "code": "na-02-saine-a1"
+    },
+    {
+      "name": "「徒神」サイネ",
+      "number": 2,
+      "code": "na-02-saine-a2"
+    },
+    {
+      "name": "ヒミカ",
+      "number": 3,
+      "code": "na-03-himika-o"
+    },
+    {
+      "name": "「原初」ヒミカ",
+      "number": 3,
+      "code": "na-03-himika-a1"
+    },
+    {
+      "name": "トコヨ",
+      "number": 4,
+      "code": "na-04-tokoyo-o"
+    },
+    {
+      "name": "「旅芸人」トコヨ",
+      "number": 4,
+      "code": "na-04-tokoyo-a1"
+    },
+    {
+      "name": "「徒神」トコヨ",
+      "number": 4,
+      "code": "na-04-tokoyo-a2"
+    },
+    {
+      "name": "オボロ",
+      "number": 5,
+      "code": "na-05-oboro-o"
+    },
+    {
+      "name": "「第三章」オボロ",
+      "number": 5,
+      "code": "na-05-oboro-a1"
+    },
+    {
+      "name": "ユキヒ",
+      "number": 6,
+      "code": "na-06-yukihi-o"
+    },
+    {
+      "name": "「社交界」ユキヒ",
+      "number": 6,
+      "code": "na-06-yukihi-a1"
+    },
+    {
+      "name": "シンラ",
+      "number": 7,
+      "code": "na-07-shinra-o"
+    },
+    {
+      "name": "「教主」シンラ",
+      "number": 7,
+      "code": "na-07-shinra-a1"
+    },
+    {
+      "name": "ハガネ",
+      "number": 8,
+      "code": "na-08-hagane-o"
+    },
+    {
+      "name": "「鍛冶師」ハガネ",
+      "number": 8,
+      "code": "na-08-hagane-a1"
+    },
+    {
+      "name": "チカゲ",
+      "number": 9,
+      "code": "na-09-chikage-o"
+    },
+    {
+      "name": "「第四章」チカゲ",
+      "number": 9,
+      "code": "na-09-chikage-a1"
+    },
+    {
+      "name": "クルル",
+      "number": 10,
+      "code": "na-10-kururu-o"
+    },
+    {
+      "name": "「探索者」クルル",
+      "number": 10,
+      "code": "na-10-kururu-a1"
+    },
+    {
+      "name": "サリヤ",
+      "number": 11,
+      "code": "na-11-thallya-o"
+    },
+    {
+      "name": "「帰還」サリヤ",
+      "number": 11,
+      "code": "na-11-thallya-a1"
+    },
+    {
+      "name": "ライラ",
+      "number": 12,
+      "code": "na-12-raira-o"
+    },
+    {
+      "name": "「祈祷師」ライラ",
+      "number": 12,
+      "code": "na-12-raira-a1"
+    },
+    {
+      "name": "ウツロ",
+      "number": 13,
+      "code": "na-13-utsuro-o"
+    },
+    {
+      "name": "「終章」ウツロ",
+      "number": 13,
+      "code": "na-13-utsuro-a1"
+    },
+    {
+      "name": "ホノカ",
+      "number": 14,
+      "code": "na-14-honoka-o"
+    },
+    {
+      "name": "「桜花拝」ホノカ",
+      "number": 14,
+      "code": "na-14-honoka-a1"
+    },
+    {
+      "name": "コルヌ",
+      "number": 15,
+      "code": "na-15-korunu-o"
+    },
+    {
+      "name": "ヤツハ",
+      "number": 16,
+      "code": "na-16-yatsuha-o"
+    },
+    {
+      "name": "ハツミ",
+      "number": 17,
+      "code": "na-17-hatsumi-o"
+    },
+    {
+      "name": "ミズキ",
+      "number": 18,
+      "code": "na-18-mizuki-o"
+    },
+    {
+      "name": "メグミ",
+      "number": 19,
+      "code": "na-19-megumi-o"
+    },
+    {
+      "name": "カナヱ",
+      "number": 20,
+      "code": "na-20-kanawe-o"
+    }
+  ]
+}
