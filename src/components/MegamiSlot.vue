@@ -1,19 +1,20 @@
 <template>
   <div :class="$style.cylinder_container">
-    <template v-for="megami in megamiTuple" :key="megami.code">
+    <template v-for="megami in state.megamiTuple" :key="megami.code">
       <MegamiSlotCylinder :code="megami.code" />
     </template>
   </div>
   <div :class="$style.button_container">
-    <MegamiSlotButton v-show="state === 'ready'" v-on:click="rollStart()" text="開始" color="#cc6666" />
-    <MegamiSlotButton v-show="state !== 'ready'" :disabled="state === 'stopping'" v-on:click="rollStop()" text="止" color="#66cc66" />
+    <MegamiSlotButton v-show="state.state === 'ready'" v-on:click="rollStart()" text="開始" color="#cc6666" />
+    <MegamiSlotButton v-show="state.state !== 'ready'" :disabled="state.state === 'stopping'" v-on:click="rollStop()" text="止" color="#66cc66" />
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue';
+import {defineComponent, reactive} from 'vue';
 import MegamiSlotCylinder from '@/components/MegamiSlotCylinder.vue';
 import MegamiSlotButton from '@/components/MegamiSlotButton.vue';
+import {pick} from '@/modules/pick';
 
 export default defineComponent({
   'name': 'MegamiSlot',
@@ -21,24 +22,33 @@ export default defineComponent({
     MegamiSlotCylinder,
     MegamiSlotButton,
   },
-  data() {
-    return {
+  setup(props, context) {
+    const state = reactive({
       'state': 'ready',
       'megamiTuple': [
         {'code': 'na-01-yurina-a1',},
         {'code': 'na-02-saine-o',},
         {'code': 'na-07-shinra-o',},
       ],
+    });
+
+    const rollStart = () => {
+      state.state = 'running';
     };
-  },
-  'methods': {
-    rollStart() {
-      this.state = 'running';
-    },
-    rollStop() {
-      this.state = 'stopping';
-      setTimeout(() => {this.state = 'ready';}, 1000);
-    },
+    const rollStop = () => {
+      state.state = 'stopping';
+      const picked = pick(3);
+      setTimeout(() => {
+        state.state = 'ready';
+        state.megamiTuple = picked;
+      }, 1000);
+    };
+
+    return {
+      state,
+      rollStart,
+      rollStop,
+    };
   },
 });
 </script>
