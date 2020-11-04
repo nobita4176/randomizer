@@ -4,182 +4,218 @@
     {
       "name": "ユリナ",
       "number": 1,
-      "code": "na-01-yurina-o"
+      "code": "na-01-yurina-o",
+      "expansion": "basic"
     },
     {
       "name": "「第一章」ユリナ",
       "number": 1,
-      "code": "na-01-yurina-a1"
+      "code": "na-01-yurina-a1",
+      "expansion": "ex1"
     },
     {
       "name": "サイネ",
       "number": 2,
-      "code": "na-02-saine-o"
+      "code": "na-02-saine-o",
+      "expansion": "basic"
     },
     {
       "name": "「第二章」サイネ",
       "number": 2,
-      "code": "na-02-saine-a1"
+      "code": "na-02-saine-a1",
+      "expansion": "ex1"
     },
     {
       "name": "「徒神」サイネ",
       "number": 2,
-      "code": "na-02-saine-a2"
+      "code": "na-02-saine-a2",
+      "expansion": "ex3"
     },
     {
       "name": "ヒミカ",
       "number": 3,
-      "code": "na-03-himika-o"
+      "code": "na-03-himika-o",
+      "expansion": "basic"
     },
     {
       "name": "「原初」ヒミカ",
       "number": 3,
-      "code": "na-03-himika-a1"
+      "code": "na-03-himika-a1",
+      "expansion": "ex1"
     },
     {
       "name": "トコヨ",
       "number": 4,
-      "code": "na-04-tokoyo-o"
+      "code": "na-04-tokoyo-o",
+      "expansion": "basic"
     },
     {
       "name": "「旅芸人」トコヨ",
       "number": 4,
-      "code": "na-04-tokoyo-a1"
+      "code": "na-04-tokoyo-a1",
+      "expansion": "ex1"
     },
     {
       "name": "「徒神」トコヨ",
       "number": 4,
-      "code": "na-04-tokoyo-a2"
+      "code": "na-04-tokoyo-a2",
+      "expansion": "ex5"
     },
     {
       "name": "オボロ",
       "number": 5,
-      "code": "na-05-oboro-o"
+      "code": "na-05-oboro-o",
+      "expansion": "expert"
     },
     {
       "name": "「第三章」オボロ",
       "number": 5,
-      "code": "na-05-oboro-a1"
+      "code": "na-05-oboro-a1",
+      "expansion": "ex2"
     },
     {
       "name": "ユキヒ",
       "number": 6,
-      "code": "na-06-yukihi-o"
+      "code": "na-06-yukihi-o",
+      "expansion": "expert"
     },
     {
       "name": "「社交界」ユキヒ",
       "number": 6,
-      "code": "na-06-yukihi-a1"
+      "code": "na-06-yukihi-a1",
+      "expansion": "ex4"
     },
     {
       "name": "シンラ",
       "number": 7,
-      "code": "na-07-shinra-o"
+      "code": "na-07-shinra-o",
+      "expansion": "expert"
     },
     {
       "name": "「教主」シンラ",
       "number": 7,
-      "code": "na-07-shinra-a1"
+      "code": "na-07-shinra-a1",
+      "expansion": "ex4"
     },
     {
       "name": "ハガネ",
       "number": 8,
-      "code": "na-08-hagane-o"
+      "code": "na-08-hagane-o",
+      "expansion": "expert"
     },
     {
       "name": "「鍛冶師」ハガネ",
       "number": 8,
-      "code": "na-08-hagane-a1"
+      "code": "na-08-hagane-a1",
+      "expansion": "ex5"
     },
     {
       "name": "チカゲ",
       "number": 9,
-      "code": "na-09-chikage-o"
+      "code": "na-09-chikage-o",
+      "expansion": "expert"
     },
     {
       "name": "「第四章」チカゲ",
       "number": 9,
-      "code": "na-09-chikage-a1"
+      "code": "na-09-chikage-a1",
+      "expansion": "ex2"
     },
     {
       "name": "クルル",
       "number": 10,
-      "code": "na-10-kururu-o"
+      "code": "na-10-kururu-o",
+      "expansion": "expert"
     },
     {
       "name": "「探索者」クルル",
       "number": 10,
-      "code": "na-10-kururu-a1"
+      "code": "na-10-kururu-a1",
+      "expansion": "ex3"
     },
     {
       "name": "サリヤ",
       "number": 11,
-      "code": "na-11-thallya-o"
+      "code": "na-11-thallya-o",
+      "expansion": "expert"
     },
     {
       "name": "「帰還」サリヤ",
       "number": 11,
-      "code": "na-11-thallya-a1"
+      "code": "na-11-thallya-a1",
+      "expansion": "ex4"
     },
     {
       "name": "ライラ",
       "number": 12,
-      "code": "na-12-raira-o"
+      "code": "na-12-raira-o",
+      "expansion": "expert"
     },
     {
       "name": "「祈祷師」ライラ",
       "number": 12,
-      "code": "na-12-raira-a1"
+      "code": "na-12-raira-a1",
+      "expansion": "ex4"
     },
     {
       "name": "ウツロ",
       "number": 13,
-      "code": "na-13-utsuro-o"
+      "code": "na-13-utsuro-o",
+      "expansion": "ex1"
     },
     {
       "name": "「終章」ウツロ",
       "number": 13,
-      "code": "na-13-utsuro-a1"
+      "code": "na-13-utsuro-a1",
+      "expansion": "ex2"
     },
     {
       "name": "ホノカ",
       "number": 14,
-      "code": "na-14-honoka-o"
+      "code": "na-14-honoka-o",
+      "expansion": "ex2"
     },
     {
       "name": "「桜花拝」ホノカ",
       "number": 14,
-      "code": "na-14-honoka-a1"
+      "code": "na-14-honoka-a1",
+      "expansion": "ex5"
     },
     {
       "name": "コルヌ",
       "number": 15,
-      "code": "na-15-korunu-o"
+      "code": "na-15-korunu-o",
+      "expansion": "ex3"
     },
     {
       "name": "ヤツハ",
       "number": 16,
-      "code": "na-16-yatsuha-o"
+      "code": "na-16-yatsuha-o",
+      "expansion": "ex3"
     },
     {
       "name": "ハツミ",
       "number": 17,
-      "code": "na-17-hatsumi-o"
+      "code": "na-17-hatsumi-o",
+      "expansion": "ex4"
     },
     {
       "name": "ミズキ",
       "number": 18,
-      "code": "na-18-mizuki-o"
+      "code": "na-18-mizuki-o",
+      "expansion": "ex4"
     },
     {
       "name": "メグミ",
       "number": 19,
-      "code": "na-19-megumi-o"
+      "code": "na-19-megumi-o",
+      "expansion": "ex5"
     },
     {
       "name": "カナヱ",
       "number": 20,
-      "code": "na-20-kanawe-o"
+      "code": "na-20-kanawe-o",
+      "expansion": "ex5"
     }
   ]
 }
