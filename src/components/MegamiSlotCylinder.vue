@@ -39,7 +39,7 @@ export default defineComponent({
   }
 
   .megami {
-    margin: 0 auto;
+    margin: 0;
     border: 1px solid #eee;
     text-align: center;
     font-family: "Noto Serif JP", serif;
