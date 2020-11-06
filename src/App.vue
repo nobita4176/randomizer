@@ -15,6 +15,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
 body, body * {
   box-sizing: border-box;
 }

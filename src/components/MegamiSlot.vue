@@ -41,7 +41,7 @@ export default defineComponent({
       setTimeout(() => {
         state.state = 'ready';
         state.megamiTuple = picked;
-      }, 1000);
+      }, 100);
     };
 
     return {
@@ -56,10 +56,19 @@ export default defineComponent({
 <style lang="scss" module>
 .cylinder_container {
   display: flex;
-  flex-direction: row;
+  @media (orientation: landscape) {
+    flex-direction: row;
+  }
+  @media (orientation: portrait) {
+    flex-direction: column;
+  }
   justify-content: space-around;
 }
 .button_container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 1vmin;
   display: flex;
   flex-direction: row;
   align-content: start;

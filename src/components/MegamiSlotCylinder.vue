@@ -2,7 +2,7 @@
   <div :class="$style.megami_container">
     <template v-for="megami in megamiList" :key="megami.name">
       <figure :class="$style.megami" v-show="megami.code === code">
-        <img :src="'/megami/dummy.png'" :alt="megami.code" width="320" height="480" />
+        <img :src="'/megami/' + megami.code + '.png'" :alt="megami.code" width="320" height="480" />
         <figcaption>{{ megami.name }}</figcaption>
       </figure>
     </template>
@@ -31,13 +31,18 @@ export default defineComponent({
 
 <style lang="scss" module>
 .megami_container {
+  flex: 0 0 calc(100% / 3);
   display: flex;
   flex-direction: column;
+  @media (orientation: portrait) {
+    flex-direction: row;
+  }
 
   .megami {
+    margin: 0 auto;
     border: 1px solid #eee;
     text-align: center;
-    font-family: "KSW闘龍", serif;
+    font-family: "Noto Serif JP", serif;
 
     img {
       width: 100%;
