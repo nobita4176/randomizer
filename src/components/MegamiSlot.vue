@@ -71,20 +71,29 @@ export default defineComponent({
   display: flex;
   @media (orientation: landscape) {
     flex-direction: row;
+    justify-content: space-around;
   }
   @media (orientation: portrait) {
     flex-direction: column;
+    justify-content: flex-start;
   }
-  justify-content: space-around;
 }
 .button_container {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 1vmin;
   display: flex;
   flex-direction: row;
   align-content: start;
   justify-content: space-around;
+
+  @media (orientation: portrait) {
+    position: fixed;
+    right: 2vmin;
+    bottom: 2vmin;
+    z-index: 2;
+    opacity: 0.9;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 </style>
