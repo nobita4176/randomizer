@@ -1,11 +1,9 @@
 <template>
-  <div :class="$style.megami_container">
-    <template v-for="megami in megamiList" :key="megami.name">
-      <figure :class="$style.megami" v-show="megami.code === code">
-        <img :src="'/megami/' + megami.code + '.png'" :alt="megami.code" width="320" height="480" />
-        <figcaption>{{ megami.name }}</figcaption>
-      </figure>
-    </template>
+  <div :class="$style.megami_container" :data-code="code">
+    <figure :class="$style.megami">
+      <img :src="'/megami/' + megami.code + '.png'" :alt="megami.code" width="320" height="480" />
+      <figcaption>{{ megami.name }}</figcaption>
+    </figure>
   </div>
 </template>
 
@@ -21,9 +19,10 @@ export default defineComponent({
       'required': true,
     },
   },
-  'data': function() {
+  setup(props) {
+    const megami = json.megamiList.find(m => m.code === props.code);
     return {
-      'megamiList': json.megamiList,
+      megami,
     };
   },
 });

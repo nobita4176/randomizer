@@ -25,23 +25,26 @@ export default defineComponent({
   setup(props, context) {
     const state = reactive({
       'state': 'ready',
-      'megamiTuple': [
-        {'code': 'na-01-yurina-a1',},
-        {'code': 'na-02-saine-o',},
-        {'code': 'na-07-shinra-o',},
-      ],
+      'megamiTuple': pick(3),
     });
+    let timerId: number|undefined = undefined;
 
     const rollStart = () => {
       state.state = 'running';
+
+      const f = () => {state.megamiTuple = pick(3);};
+      timerId = window.setInterval(f, 50);
     };
     const rollStop = () => {
       state.state = 'stopping';
-      const picked = pick(3);
+
+      if (timerId) {
+        window.clearInterval(timerId);
+        timerId = undefined;
+      }
       setTimeout(() => {
         state.state = 'ready';
-        state.megamiTuple = picked;
-      }, 100);
+      }, 1000);
     };
 
     return {
