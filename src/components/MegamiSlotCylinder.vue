@@ -42,7 +42,6 @@ export default defineComponent({
     margin: 0;
     border: 1px solid #eee;
     text-align: center;
-    font-family: "Noto Serif JP", serif;
 
     img {
       width: 100%;

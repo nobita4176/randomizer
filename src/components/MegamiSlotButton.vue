@@ -42,7 +42,7 @@ export default defineComponent({
   transform: rotate(-45deg);
   writing-mode: vertical-rl;
   white-space: nowrap;
-  font-family: "KSW闘龍", serif;
+  font-family: "KSW闘龍", cursive, serif;
   font-size: calc(var(--button-size) * 0.4);
   color: #fff;
   text-shadow: 1px 1px 5px #222222;

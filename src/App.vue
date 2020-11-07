@@ -19,6 +19,7 @@ export default defineComponent({
 
 body, body * {
   box-sizing: border-box;
+  font-family: "Noto Serif JP", serif;
 }
 #app {
 }
