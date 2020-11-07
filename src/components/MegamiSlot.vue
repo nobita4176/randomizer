@@ -5,8 +5,10 @@
     </template>
   </div>
   <div :class="$style.button_container">
-    <MegamiSlotButton v-show="state.state === 'ready'" v-on:click="rollStart()" text="開始" color="#cc6666" />
-    <MegamiSlotButton v-show="state.state !== 'ready'" :disabled="state.state === 'stopping'" v-on:click="rollStop()" text="止" color="#66cc66" />
+    <button v-show="state.state === 'ready'" v-on:click="rollStart()"><img src="/button/start.png"></button>
+    <button v-show="state.state === 'not-ready'" disabled><img src="/button/start.png"></button>
+    <button v-show="state.state === 'running'"  v-on:click="rollStop()"><img src="/button/stop.png"></button>
+    <button v-show="state.state === 'stopping'" disabled><img src="/button/stop.png"></button>
   </div>
 </template>
 
@@ -34,13 +36,16 @@ export default defineComponent({
     });
 
     const state = reactive({
-      'state': 'ready',
+      'state': 'not-ready',
       'megamiTuple': [
         {'code': 'na-10-kururu-a1',},
         {'code': 'na-10-kururu-a1',},
         {'code': 'na-10-kururu-a1',},
       ],
     });
+
+    setTimeout(() => {state.state = 'ready';}, 200);
+
     let timerId: number|undefined = undefined;
 
     const rollStart = () => {
@@ -58,7 +63,7 @@ export default defineComponent({
       }
       setTimeout(() => {
         state.state = 'ready';
-      }, 1000);
+      }, 300);
     };
 
     return {
@@ -97,6 +102,25 @@ export default defineComponent({
 
     &:hover {
       opacity: 1;
+    }
+  }
+
+  button {
+    width: 30vmin;
+    height: 30vmin;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    img {
+      display: block;
+      text-align: center;
+      max-width: 100%;
     }
   }
 }
