@@ -1,5 +1,9 @@
 <template>
   <MegamiSlot />
+  <footer>
+    <p>ふるよにコモンズ/BakaFire,TOKIAME</p>
+    <p>https://main-bakafire.ssl-lolipop.jp/furuyoni/na/rule.html</p>
+  </footer>
 </template>
 
 <script lang="ts">
@@ -19,8 +23,40 @@ export default defineComponent({
 
 body, body * {
   box-sizing: border-box;
+}
+body {
   font-family: "Noto Serif JP", serif;
+  margin: 0;
+  overflow-y: hidden;
 }
 #app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @media (orientation: portrait) {
+    justify-content: flex-start;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    @media (orientation: portrait) {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1;
+    }
+  }
 }
 </style>

@@ -15,6 +15,7 @@ import {defineComponent, reactive} from 'vue';
 import MegamiSlotCylinder from '@/components/MegamiSlotCylinder.vue';
 import MegamiSlotButton from '@/components/MegamiSlotButton.vue';
 import {pick} from '@/modules/pick';
+import json from '@/assets/megami_list.json';
 
 export default defineComponent({
   'name': 'MegamiSlot',
@@ -23,25 +24,37 @@ export default defineComponent({
     MegamiSlotButton,
   },
   setup(props, context) {
+    json.megamiList.forEach(megami => {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'preload');
+      link.setAttribute('as', 'image');
+      link.setAttribute('type', 'image/png');
+      link.setAttribute('href', '/megami/' + megami.code + '.png');
+      document.head.appendChild(link);
+    });
+
     const state = reactive({
       'state': 'ready',
-      'megamiTuple': [
-        {'code': 'na-01-yurina-a1',},
-        {'code': 'na-02-saine-o',},
-        {'code': 'na-07-shinra-o',},
-      ],
+      'megamiTuple': pick(3),
     });
+    let timerId: number|undefined = undefined;
 
     const rollStart = () => {
       state.state = 'running';
+
+      const f = () => {state.megamiTuple = pick(3);};
+      timerId = window.setInterval(f, 50);
     };
     const rollStop = () => {
       state.state = 'stopping';
-      const picked = pick(3);
+
+      if (timerId) {
+        window.clearInterval(timerId);
+        timerId = undefined;
+      }
       setTimeout(() => {
         state.state = 'ready';
-        state.megamiTuple = picked;
-      }, 100);
+      }, 1000);
     };
 
     return {
@@ -58,20 +71,29 @@ export default defineComponent({
   display: flex;
   @media (orientation: landscape) {
     flex-direction: row;
+    justify-content: space-around;
   }
   @media (orientation: portrait) {
     flex-direction: column;
+    justify-content: flex-start;
   }
-  justify-content: space-around;
 }
 .button_container {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 1vmin;
   display: flex;
   flex-direction: row;
   align-content: start;
   justify-content: space-around;
+
+  @media (orientation: portrait) {
+    position: fixed;
+    right: 2vmin;
+    bottom: 2vmin;
+    z-index: 2;
+    opacity: 0.9;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 </style>
