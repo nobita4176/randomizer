@@ -5,10 +5,13 @@
     </template>
   </div>
   <div :class="$style.button_container">
-    <button v-show="state.state === 'ready'" v-on:click="rollStart()"><img src="/button/start.png"></button>
-    <button v-show="state.state === 'not-ready'" disabled><img src="/button/start.png"></button>
+    <button v-show="state.state === 'loading'" disabled><img src="/button/start.png"></button>
+    <button v-show="state.state === 'ready' || state.state === 'not-ready'" v-on:click="rollStart()"><img src="/button/start.png"></button>
     <button v-show="state.state === 'running'"  v-on:click="rollStop()"><img src="/button/stop.png"></button>
     <button v-show="state.state === 'stopping'" disabled><img src="/button/stop.png"></button>
+  </div>
+  <div :class="$style.share_container">
+    <button :class="$style.share-twitter" v-show="state.state === 'ready'" v-on:click="share('twitter')"><img src="/button/twitter.svg" width="48" height="48"></button>
   </div>
 </template>
 
@@ -36,15 +39,15 @@ export default defineComponent({
     });
 
     const state = reactive({
-      'state': 'not-ready',
+      'state': 'loading',
       'megamiTuple': [
-        {'code': 'na-10-kururu-a1',},
-        {'code': 'na-10-kururu-a1',},
-        {'code': 'na-10-kururu-a1',},
+        {'code': 'na-10-kururu-a1', 'name': '「探索者」クルル',},
+        {'code': 'na-10-kururu-a1', 'name': '「探索者」クルル',},
+        {'code': 'na-10-kururu-a1', 'name': '「探索者」クルル',},
       ],
     });
 
-    setTimeout(() => {state.state = 'ready';}, 200);
+    setTimeout(() => {state.state = 'not-ready';}, 200);
 
     let timerId: number|undefined = undefined;
 
@@ -65,11 +68,24 @@ export default defineComponent({
         state.state = 'ready';
       }, 300);
     };
+    const share = (service: string) => {
+      const names = state.megamiTuple.map(megami => '・' + megami.name).join('\n');
+      let url = '';
+      switch (service) {
+        case 'twitter': {
+          const text = encodeURI(`今回のランダム3柱は:\n${names}\n`);
+          url = `https://twitter.com/intent/tweet?hashtags=ふるよに&text=${text}&url=${location.href}`;
+          break;
+        }
+      }
+      window.open(url, 'share');
+    };
 
     return {
       state,
       rollStart,
       rollStop,
+      share,
     };
   },
 });
@@ -108,6 +124,36 @@ export default defineComponent({
   button {
     width: 30vmin;
     height: 30vmin;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    img {
+      display: block;
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+}
+
+.share_container {
+  position: fixed;
+
+  @media (orientation: landscape) {
+    bottom: 2vmin;
+    right: 2vmin;
+  }
+  @media (orientation: portrait) {
+    bottom: 2vmin;
+    left: 2vmin;
+  }
+
+  button {
     cursor: pointer;
     padding: 0;
     border: none;
