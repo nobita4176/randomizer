@@ -15,6 +15,7 @@ import {defineComponent, reactive} from 'vue';
 import MegamiSlotCylinder from '@/components/MegamiSlotCylinder.vue';
 import MegamiSlotButton from '@/components/MegamiSlotButton.vue';
 import {pick} from '@/modules/pick';
+import json from '@/assets/megami_list.json';
 
 export default defineComponent({
   'name': 'MegamiSlot',
@@ -23,6 +24,15 @@ export default defineComponent({
     MegamiSlotButton,
   },
   setup(props, context) {
+    json.megamiList.forEach(megami => {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'preload');
+      link.setAttribute('as', 'image');
+      link.setAttribute('type', 'image/png');
+      link.setAttribute('href', '/megami/' + megami.code + '.png');
+      document.head.appendChild(link);
+    });
+
     const state = reactive({
       'state': 'ready',
       'megamiTuple': pick(3),
