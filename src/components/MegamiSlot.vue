@@ -35,7 +35,11 @@ export default defineComponent({
 
     const state = reactive({
       'state': 'ready',
-      'megamiTuple': pick(3),
+      'megamiTuple': [
+        {'code': 'na-10-kururu-a1',},
+        {'code': 'na-10-kururu-a1',},
+        {'code': 'na-10-kururu-a1',},
+      ],
     });
     let timerId: number|undefined = undefined;
 

@@ -28,6 +28,11 @@ body {
   font-family: "Noto Serif JP", serif;
   margin: 0;
   overflow-y: hidden;
+
+  @media (prefers-color-scheme: dark) {
+    color: #ffffff;
+    background-color: #222222;
+  }
 }
 #app {
   width: 100vw;
@@ -43,7 +48,6 @@ body {
   footer {
     text-align: center;
     font-size: 0.7rem;
-    background-color: rgba(255, 255, 255, 0.5);
 
     @media (orientation: portrait) {
       position: fixed;
@@ -51,6 +55,11 @@ body {
       right: 0;
       bottom: 0;
       z-index: 1;
+
+      background-color: rgba(255, 255, 255, 0.5);
+      @media (prefers-color-scheme: dark) {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
     }
 
     p {

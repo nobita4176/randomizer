@@ -20,6 +20,7 @@ module.exports = {
     },
     manifestOptions: {
       orientation: 'landscape',
+      background_color: '#ffffff',
       icons: [
         {
           src: 'favicon.png',

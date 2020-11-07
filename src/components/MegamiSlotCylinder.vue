@@ -41,7 +41,7 @@ export default defineComponent({
   .megami {
     margin: 0;
     width: 100%;
-    border: 1px solid #eee;
+    border: 0;
     text-align: center;
 
     img {
