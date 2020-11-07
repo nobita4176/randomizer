@@ -1,11 +1,17 @@
 module.exports = {
+  pages: {
+    index: {
+      entry: 'src/main.js',
+      title: 'らんだまいざ',
+    }
+  },
   css: {
     sourceMap: true,
   },
   pwa: {
     name: 'らんだまいざ',
     themeColor: '#ca9ebb',
-	  iconPaths: {
+    iconPaths: {
       favicon32: 'favicon.ico',
       favicon16: null,
       appleTouchIcon: null,
