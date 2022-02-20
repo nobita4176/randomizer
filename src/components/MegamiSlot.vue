@@ -18,7 +18,7 @@
 <script lang="ts">
 import {defineComponent, reactive} from 'vue';
 import MegamiSlotCylinder from '@/components/MegamiSlotCylinder.vue';
-import MegamiSlotButton from '@/components/MegamiSlotButton.vue';
+// import MegamiSlotButton from '@/components/MegamiSlotButton.vue';
 import {pick} from '@/modules/pick';
 import json from '@/assets/megami_list.json';
 
@@ -26,10 +26,10 @@ export default defineComponent({
   'name': 'MegamiSlot',
   'components': {
     MegamiSlotCylinder,
-    MegamiSlotButton,
+    // MegamiSlotButton,
   },
   setup(props, context) {
-    json.megamiList.forEach(megami => {
+    json.megamiList.forEach((megami: Megami) => {
       const link = document.createElement('link');
       link.setAttribute('rel', 'preload');
       link.setAttribute('as', 'image');
@@ -41,9 +41,9 @@ export default defineComponent({
     const state = reactive({
       'state': 'loading',
       'megamiTuple': [
-        {'code': 'na-10-kururu-a1', 'name': '「探索者」クルル',},
-        {'code': 'na-10-kururu-a1', 'name': '「探索者」クルル',},
-        {'code': 'na-10-kururu-a1', 'name': '「探索者」クルル',},
+        {'code': 'na-10-kururu-a1', 'name': '「探索者」クルル', 'number': 11, 'expansion': 'ex3'},
+        {'code': 'na-10-kururu-a1', 'name': '「探索者」クルル', 'number': 11, 'expansion': 'ex3'},
+        {'code': 'na-10-kururu-a1', 'name': '「探索者」クルル', 'number': 11, 'expansion': 'ex3'},
       ],
     });
 
@@ -69,7 +69,7 @@ export default defineComponent({
       }, 300);
     };
     const share = (service: string) => {
-      const names = state.megamiTuple.map(megami => '・' + megami.name).join('\n');
+      const names = state.megamiTuple.map((megami: Megami) => '・' + megami.name).join('\n');
       let url = '';
       switch (service) {
         case 'twitter': {

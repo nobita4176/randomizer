@@ -1,17 +1,17 @@
 import json from '@/assets/megami_list.json';
-var megamiList = json.megamiList;
-var megamiCount = json.megamiCount;
-var pick = function (count) {
-    var numbers = [];
+const megamiList = json.megamiList;
+const megamiCount = json.megamiCount;
+const pick = function (count) {
+    const numbers = [];
     while (numbers.length < count) {
-        var n = Math.floor(Math.random() * megamiCount);
+        const n = Math.floor(Math.random() * megamiCount);
         if (!numbers.includes(n)) {
             numbers.push(n);
         }
     }
-    var result = [];
+    const result = [];
     numbers.forEach(function (n) {
-        var found = megamiList.find(function (megami) { return megami.number === n; });
+        const found = megamiList.find(function (megami) { return megami.number === n; });
         if (found) {
             result.push(found);
         }
