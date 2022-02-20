@@ -3,7 +3,10 @@ module.exports = {
   env: {
     node: true
   },
-  'extends': [
+  globals: {
+    Megami: true,
+  },
+  extends: [
     'plugin:vue/vue3-essential',
     'eslint:recommended',
     '@vue/typescript/recommended'
