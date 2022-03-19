@@ -1,5 +1,5 @@
 {
-  "megamiCount": 20,
+  "megamiCount": 22,
   "megamiList": [
     {
       "name": "ユリナ",
@@ -134,6 +134,12 @@
       "expansion": "ex3"
     },
     {
+      "name": "「徒神」クルル",
+      "number": 10,
+      "code": "na-10-hatsumi-a2",
+      "expansion": "ex6"
+    },
+    {
       "name": "サリヤ",
       "number": 11,
       "code": "na-11-thallya-o",
@@ -194,10 +200,22 @@
       "expansion": "ex3"
     },
     {
+      "name": "「徒神」ヤツハ",
+      "number": 16,
+      "code": "na-16-yatsuha-a1",
+      "expansion": "ex6"
+    },
+    {
       "name": "ハツミ",
       "number": 17,
       "code": "na-17-hatsumi-o",
       "expansion": "ex4"
+    },
+    {
+      "name": "「徒神」ハツミ",
+      "number": 17,
+      "code": "na-17-hatsumi-a1",
+      "expansion": "ex6"
     },
     {
       "name": "ミズキ",
@@ -216,6 +234,18 @@
       "number": 20,
       "code": "na-20-kanawe-o",
       "expansion": "ex5"
+    },
+    {
+      "name": "カムヰ",
+      "number": 21,
+      "code": "na-21-kamuwi-o",
+      "expansion": "ex6"
+    },
+    {
+      "name": "レンリ",
+      "number": 22,
+      "code": "na-22-renri-o",
+      "expansion": "ex6"
     }
   ]
 }
