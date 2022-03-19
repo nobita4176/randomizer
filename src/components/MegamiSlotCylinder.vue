@@ -47,6 +47,7 @@ export default defineComponent({
     img {
       width: 100%;
       height: auto;
+      aspect-ratio: 1.5;
     }
 
     @media (orientation: portrait) {
