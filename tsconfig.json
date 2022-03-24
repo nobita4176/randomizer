@@ -1,40 +1,21 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "types": [
-      "webpack-env"
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ],
-    "resolveJsonModule": true
-  },
+  "extends": "@vue/tsconfig/tsconfig.web.json",
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
+    "env.d.ts",
+    "src/**/*",
     "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "node_modules/vite-plugin-pwa/client.d.ts"
   ],
-  "exclude": [
-    "node_modules"
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.vite-config.json"
+    }
   ]
 }

@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.megami_container" :data-code="code">
-    <figure :class="$style.megami">
+    <figure :class="$style.megami" v-if="megami">
       <img :src="'/megami/' + megami.code + '.png'" width="480" height="320" />
       <figcaption>{{ megami.name }}</figcaption>
     </figure>

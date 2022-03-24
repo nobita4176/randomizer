@@ -11,7 +11,7 @@
     <button v-show="state.state === 'stopping'" disabled><img src="/button/stop.png"></button>
   </div>
   <div :class="$style.share_container">
-    <button :class="$style.share-twitter" v-show="state.state === 'ready'" v-on:click="share('twitter')"><img src="/button/twitter.svg" width="48" height="48"></button>
+    <button :class="$style.share_twitter" v-show="state.state === 'ready'" v-on:click="share('twitter')"><img src="/button/twitter.svg" width="48" height="48"></button>
   </div>
 </template>
 
