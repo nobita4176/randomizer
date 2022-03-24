@@ -22,6 +22,7 @@
     "typescript": "~4.6.2",
     "vercel": "latest",
     "vite": "^2.8.6",
+    "vite-plugin-pwa": "^0.11.13",
     "vue-tsc": "^0.33.7"
   }
 }
